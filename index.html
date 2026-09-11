@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>गणपती बाप्पा निमंत्रण | ॥ श्री गणेशाय नमः ॥</title>
+  <meta name="description" content="भगवान गणेशाच्या दिव्य आशीर्वादाने, आपल्याला बाप्पाच्या दर्शनासाठी आमंत्रित करण्यात येत आहे.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:wght@400;600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating Music Button -->
+  <button id="musicBtn" class="music-btn" aria-label="संगीत चालू/बंद करा" title="पार्श्वसंगीत">
+    <span class="music-icon">🎵</span>
+    <span class="music-waves">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <!-- संगीत फाइलचा पथ येथे बदला -->
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Petals Container -->
+  <div id="petals" class="petals-container"></div>
+  <!-- Sparkles Container -->
+  <div id="sparkles" class="sparkles-container"></div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="sanskrit-top fade-in">॥ श्री गणेशाय नमः ॥</p>
+      
+      <div class="ganpati-wrapper fade-in">
+        <div class="ganpati-glow"></div>
+        <img src="assets/ganpati.png" alt="भगवान गणेश - गणपती बाप्पा" class="ganpati-img" id="ganpatiImg">
+      </div>
+
+      <h1 class="main-heading fade-in">
+        <span class="emoji">🐘</span> गणपती बाप्पा मोरया! <span class="emoji">🙏</span>
+      </h1>
+
+      <p class="welcome-msg fade-in">
+        भगवान गणेशाच्या दिव्य आशीर्वादाने,<br>
+        <strong>गणपती बाप्पा आमच्या घरी पधारले आहेत!</strong> 🏠🕉️<br><br>
+        आम्ही आपल्याला आणि आपल्या कुटुंबाला<br>
+        बाप्पाच्या पवित्र दर्शनासाठी व आशीर्वादासाठी<br>
+        मनापासून आमंत्रित करतो. 🙏❤️
+      </p>
+
+      <a href="#invitation" class="cta-btn fade-in" id="viewInviteBtn">
+        🙏 निमंत्रण पहा
+      </a>
+    </div>
+
+    <!-- Decorative bottom wave -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120 Z" fill="var(--cream)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== INVITATION CARD ==================== -->
+  <section class="invitation-section" id="invitation">
+    <div class="section-inner">
+      <div class="invite-card glass-card fade-up">
+        <div class="card-border-ornament top-left"></div>
+        <div class="card-border-ornament top-right"></div>
+        <div class="card-border-ornament bottom-left"></div>
+        <div class="card-border-ornament bottom-right"></div>
+
+        <p class="card-sanskrit">🌺 श्री गणेशाय नमः 🌺</p>
+        <h2 class="card-title">🐘 गणपती बाप्पा मोरया! 🐘</h2>
+        
+        <p class="card-body">
+          मोठ्या आनंदाने आणि भक्तीभावाने,<br>
+          आम्ही आपल्याला आणि आपल्या कुटुंबाला<br>
+          गणेश चतुर्थीच्या शुभ प्रसंगी<br>
+          आमच्या घरी येण्यासाठी आमंत्रित करतो. 🙏
+        </p>
+        <p class="card-body highlight">
+          येऊन आमच्या प्रिय गणपती बाप्पाचे आशीर्वाद घ्या.
+        </p>
+
+        <div class="invite-details">
+          <div class="detail-item">
+            <span class="detail-icon">📅</span>
+            <div>
+              <span class="detail-label">दिनांक</span>
+              <span class="detail-value" id="inviteDate">१४ सप्टेंबर २०२६</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">⏰</span>
+            <div>
+              <span class="detail-label">वेळ</span>
+              <span class="detail-value" id="inviteTime">सकाळी ९:००</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div>
+              <span class="detail-label">स्थळ</span>
+              <span class="detail-value" id="inviteAddress">साई विभूती</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="directionsBtn" class="directions-btn" target="_blank" rel="noopener">
+          📍 दिशानिर्देश मिळवा
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COUNTDOWN ==================== -->
+  <section class="countdown-section" id="countdown">
+    <div class="section-inner">
+      <h2 class="section-heading fade-up">⏳ बाप्पाच्या आगमनाची उलटी गिनती</h2>
+      <div class="countdown-grid fade-up">
+        <div class="count-card">
+          <span class="count-num" id="days">00</span>
+          <span class="count-label">दिवस</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="hours">00</span>
+          <span class="count-label">तास</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="minutes">00</span>
+          <span class="count-label">मिनिटे</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="seconds">00</span>
+          <span class="count-label">सेकंद</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DARSHAN SECTION ==================== -->
+  <section class="darshan-section" id="darshan">
+    <div class="section-inner">
+      <div class="darshan-content fade-up">
+        <div class="decorative-icons">
+          <span>🪔</span><span>🌸</span><span>🔔</span><span>🪔</span>
+        </div>
+        <h2 class="section-heading">🙏 बाप्पाच्या दर्शनासाठी या</h2>
+        <p class="darshan-text">
+          गणपती बाप्पा आपल्या दिव्य उपस्थितीने आमचे घर आशीर्वादित करत आहेत.<br>
+          आपली उपस्थिती या उत्सवाला आणखी खास बनवेल. ❤️
+        </p>
+        <div class="decorative-icons bottom">
+          <span>🌸</span><span>🪔</span><span>🔔</span><span>🌸</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAMILY SECTION ==================== -->
+  <section class="family-section" id="family">
+    <div class="section-inner">
+      <div class="family-card glass-card fade-up">
+        <p class="family-label">❤️ प्रेमाने आयोजित</p>
+        <h2 class="family-name" id="familyName">पाटील परिवार</h2>
+        <p class="family-blessing">॥ गणपती बाप्पा मोरया ॥</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>🐘 भगवान गणेश आपल्याला आणि आपल्या कुटुंबाला सुख, समृद्धी आणि ज्ञानाचे आशीर्वाद देवो 🙏</p>
+    <p class="footer-sanskrit">॥ श्री गणेशाय नमः ॥</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
